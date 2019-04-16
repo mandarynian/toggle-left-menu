@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+body, h1, h2, h3 ,h4 ,h5 ,p ,a  {
+    font-family: 'Cuprum', sans-serif;
+}
+
+.collapse-content {
+    display: none;
+    position: fixed;
+    left: -155px;
+    background-color: #03738C; 
+    box-sizing: border-box;
+}
+
+.collapse-content.hide {
+    display: flex;
+    animation: ease-in-out hide-menu .2s; 
+}
+
+.collapse-content.show {
+    display: flex;
+    animation: ease-in-out show-menu .2s;
+    left: 0px; 
+    z-index: -1;
+}
+
+.collapse-content .bg-primary-color {
+    height: 100vh;
+    padding-top: 80px !important; 
+    box-sizing: border-box;
+}
+
+.collapse-content-container {
+    display: flex;
+    opacity: .9;
+    flex-direction: column;
+}
+
+.page_header-nav_list {
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px;
+
+}
+
+.page_header-nav_list-item {
+    align-self: flex-start;
+    transition:  padding-left ease-in .1s;
+    padding-top: 35px;
+    list-style-type: none; 
+}
+
+.page_header-nav_list-item-link:hover {
+    padding-left: 10px;
+    transition: ease-in .3s;
+}
+
+
+.collapse-content li svg {
+    height: 1.5rem;
+    width: 1.5rem;
+    align-self: center;
+    margin-right: 5px;
+    fill: white; 
+}
+
+.page_header-nav_list-item-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.collapse-content-header {
+    font-size: 25px;
+    margin: 0;
+    padding: 0 22px;
+    align-self: center;
+    color: white;
+}        
+
+.navbar-toggler {
+    margin: 20px 12px;
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+}
+
+.navbar-toggler svg {
+    transition: ease-in-out .2s;
+}
+
+.navbar-toggler .navbar-toggler-icon svg {
+    height: 25px;
+    fill: #03738C;
+}
+
+.navbar-toggler .navbar-toggler-icon svg {
+    height: 25px;
+    fill: #03738C;
+}
+
+.navbar-toggler:hover svg {
+    transform: scale(1.2);
+}
+
+.navbar-toggler.navbar-toggler-icon-scalein svg {
+    fill: white;
+}
+
+.navbar-toggler.navbar-toggler-icon-scalein:hover svg {
+    transform: scale(0.8);
+}
+
+
+@keyframes show-menu {
+    from {
+        left: -155px; }
+    to {
+        left: 0px; } }
+    @keyframes hide-menu {
+    from {
+        left: 0px; }
+    to {
+        left: -155px;
+        display: none; } }
